@@ -1,0 +1,47 @@
+<form [formGroup]="formPasajero">
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-info">Registro de pasajeros</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Primer nombre</mat-label>
+                <input formControlName="primerNombre" matInput placeholder="Escriba su primer nombre">
+            </mat-form-field>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Segundo nombre</mat-label>
+                <input formControlName="segundoNombre" matInput placeholder="Escriba su segundo nombre">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field class="example-full-width" appearance="fill" formGroupName="grupo">
+                <mat-label>Primer apellido</mat-label>
+                <input formControlName="primerApellido" matInput placeholder="Escriba su primer apellido">
+            </mat-form-field>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Segundo apellido</mat-label>
+                <input formControlName="segundoApellido" matInput placeholder="Escriba su segundo apellido">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button [disabled]="formPasajero.invalid" mat-flat-button color="primary" (click)="MostrarValorFormulario()">Obtener</button>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <span>{{valorFormulario}}</span>
+        </div>
+    </div> -->
+
+</form>
