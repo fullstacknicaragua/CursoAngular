@@ -1,0 +1,122 @@
+@import "../css/colores.scss";
+
+body {
+  background-color: $gris4;
+}
+
+.mat-form-field,
+input {
+  width: 100% !important;
+}
+
+
+.fondo-blanco {
+  background-color: $blanco;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.sin-espaciado {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.espaciado-superior {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.espaciado-derecha {
+  padding: 0.5em;
+}
+
+.espaciado-izquierda {
+  padding: 0.5em;
+}
+
+.contenedor-azul-celeste{
+  background: $azulCeleste;
+  color:$blanco;
+  margin: 10px;
+  }
+
+  .contenedor-azul-celeste span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+  
+  .contenedor-rosado{
+    background: $rosado;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+
+  .contenedor-rosado span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .contenedor-verdeTierno{
+    background: $verdeTierno;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+  .contenedor-verdeTierno span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .contenedor-oscuro{
+    background: $negro_b;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+  .contenedor-oscuro span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .contenedor-amarillo{
+    background: $amarillo_b;
+    color:$blanco;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+  .contenedor-amarillo span.texto{
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th.mat-header-cell
+  {
+    color: $blanco;
+    font-weight: bold;
+  }
+  
+  tr.mat-header-row {
+    height: 56px;
+    background: #3f51b5;
+    color: #fff !important;
+}
+.user_icon {
+  width: 100%;
+  height: auto;
+  color: #b7bcc2;
+  margin: 20px auto;
+  text-align: center;
+}
+    

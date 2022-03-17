@@ -1,0 +1,31 @@
+<div>
+    <div class="container-login100">
+        <div class="user_icon">
+            <img src="assets/fulll-stack.png" width="180" height="180" alt="Java Full Stack">
+        </div>
+        <div [formGroup]="fGroupUser">
+            <mat-form-field class="input-full-width" floatLabel="never" color="accent">
+                <input class="estilo_auto_complete" id="username" formControlName="username"
+                    matTooltip="¿Tienes un usuario de la comunidad?" matInput placeholder="Usuario" type="text" required #usrnm />
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint align="end">{{usrnm.value.length}} / 50</mat-hint>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field id="mffPass" class="input-full-width" color="accent">
+                <input id="clave" matTooltip="¿Cual es tu contraseña?" formControlName="password" matInput
+                    placeholder="Password" type="password" required #pass />
+                <mat-icon matSuffix> lock_open </mat-icon>
+                <mat-hint align="end">{{pass.value.length}} / 50</mat-hint>
+            </mat-form-field>
+            &nbsp;
+            <div class="div_texbox">
+                <button id="login_user" type="submit" style="margin-left: 0.4%;" matTooltip="Iniciar sesión"
+                    color="accent" (click)="validate()" [disabled]="!fGroupUser.valid" mat-raised-button color="accent">
+                    Iniciar sesión
+                </button>
+
+            </div>
+            <br />
+        </div>
+    </div>
+</div>

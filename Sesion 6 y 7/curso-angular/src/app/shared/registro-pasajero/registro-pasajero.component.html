@@ -1,0 +1,102 @@
+<form [formGroup]="formulario">
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-info">Registro de pasajeros</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Primer nombre</mat-label>
+                <input formControlName="primerNombre" matInput placeholder="Escriba su primer nombre">
+                <mat-error *ngIf="formulario.get('primerNombre')?.hasError('required')">
+                    Primer nombre es <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Segundo nombre</mat-label>
+                <input formControlName="segundoNombre" matInput placeholder="Escriba su segundo nombre">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Primer apellido</mat-label>
+                <input formControlName="primerApellido" matInput placeholder="Escriba su primer apellido">
+                <mat-error *ngIf="formulario.get('primerApellido')?.hasError('required')">
+                    Primer apellido es <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Segundo apellido</mat-label>
+                <input formControlName="segundoApellido" matInput placeholder="Escriba su segundo apellido">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Pais</mat-label>
+                <mat-select formControlName="idPais" #selectIngreso>
+                    <mat-option *ngFor="let p of this.pais" [value]="p.idPais">
+                        {{p.nombre}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="formulario.get('idPais')?.hasError('required')">
+                    Pais es <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- <span>{{formulario.getRawValue() |json}}</span> -->
+        </div>
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha de nacimiento</mat-label>
+                <input formControlName="fechaNacimiento" matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Número de telefono</mat-label>
+                <input formControlName="telefono" matInput placeholder="Escriba su telefono">
+                <mat-icon matPrefix>phone</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Número de documento</mat-label>
+                <input formControlName="numDocumento" matInput placeholder="Escriba su numero de documento">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <mat-form-field appearance="fill">
+                <mat-label>E-mail</mat-label>
+                <input formControlName="email" matInput placeholder="Escriba su e-mail">
+                <mat-icon matPrefix>alternate_email</mat-icon>
+                <mat-error *ngIf="formulario.get('email')?.hasError('email')">
+                    e-mail <strong>incorrecto</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button class="btn btn-primary float-end" [disabled]="formulario.invalid" mat-flat-button (click)="Guardar()">
+                <i class="fa fa-save"></i> Guardar
+            </button>
+        </div>
+    </div>
+</form>

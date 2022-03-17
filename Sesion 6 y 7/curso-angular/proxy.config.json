@@ -1,0 +1,8 @@
+{
+    "/api/*":{
+        "target": "https://javafullstackdevelops.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
